@@ -1,0 +1,235 @@
+img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+  pointer-events: none;
+  /*禁止图片触发事件 防止图片保存*/
+  -webkit-user-select: none;
+  /* ios防止页面元素被选中 */
+  -webkit-touch-callout: none;
+  /*禁止系统默认菜单*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* 清除点击高亮 */
+}
+input,
+select {
+  outline: none;
+  /*清除轮廓线*/
+  background: none;
+  /*清除浏览器默认样式*/
+  -webkit-appearance: none;
+  /*清除input属性默认样式*/
+  -moz-appearance: none;
+  /*清除input属性默认样式*/
+  appearance: none;
+  /*清除input属性默认样式*/
+}
+div {
+  -webkit-user-select: none;
+  /* ios防止页面元素被选中 */
+  -webkit-touch-callout: none;
+  /*禁止系统默认菜单*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* 清除点击高亮 */
+}
+img[src=""] {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+/* 去掉input 盘边的小图标 */
+input::-webkit-search-cancel-button {
+  display: none;
+}
+body,
+html {
+  width: 100vw;
+  max-width: 750px;
+  max-height: 1448px;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: #666;
+}
+.bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* 首页 */
+.home {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* 头部 */
+  /* 固定导航栏 */
+  /* 工具导航栏 */
+  /* 内容 */
+}
+.home header {
+  position: relative;
+  width: 100%;
+  height: 15.6vw;
+  background-color: #fff;
+  /* logo */
+}
+.home header .logo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.home .fixednav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 32/7.5vw;
+  height: 32/7.5vw;
+  background-color: #3cb5d5;
+  border-radius: 50%;
+  z-index: 999;
+}
+.home .toolbar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 5.6vw;
+  line-height: 5.6vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  color: #fff;
+}
+.home .toolbar ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.home .toolbar ul li {
+  width: 33%;
+  height: 100%;
+}
+.home .toolbar ul li a {
+  position: absolute;
+  color: #fff;
+  font-size: 12px;
+  height: 5.6vw;
+  padding-top: 1.33333333vw;
+}
+.home .toolbar ul li a img {
+  top: 3px;
+  position: absolute;
+  left: 50%;
+  margin-left: -20/2/7.5vw;
+  width: 20/7.5vw;
+  height: 21/7.5vw;
+}
+.home .content {
+  position: relative;
+  width: 96%;
+  margin: 0 2%;
+  box-sizing: border-box;
+  height: auto;
+  /* 广告 */
+  /* 环境 */
+}
+.home .content .advertising {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 31.06666667vw;
+}
+.home .content .advertising img {
+  width: 100%;
+  height: 31.06666667vw;
+  object-fit: cover;
+}
+.home .content .advertising h3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 15.46666667vw;
+  background-color: rgba(102, 0, 0, 0.6);
+  line-height: 5.33333333vw;
+  color: #fff;
+  font-size: 2.66666667vw;
+  box-sizing: border-box;
+  padding: 2vw 0;
+}
+.home .content .advertising span {
+  position: absolute;
+  bottom: 1.33333333vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+  font-size: 2.66666667vw;
+}
+.home .content .environment {
+  width: 100%;
+  height: auto;
+}
+.home .content .environment .environment-h {
+  height: 84px;
+  width: 100%;
+}
+.home .content .environment .environment-h h2 {
+  height: 6.4vw;
+  font-size: 2.93333333vw;
+  color: #333;
+  box-sizing: border-box;
+  padding-top: 1.33333333vw;
+}
+.home .content .environment .environment-h p {
+  height: 3.73333333vw;
+  font-size: 16px;
+  line-height: 3.73333333vw;
+  color: #989898;
+}
+.home .content .environment ul {
+  width: 100%;
+  height: auto;
+}
+.home .content .environment ul li {
+  width: 100%;
+  height: auto;
+  margin-top: 2.66666667vw;
+}
+.home .content .environment ul li > a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 64.8vw;
+}
+.home .content .environment ul li > a img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.home .content .environment ul li .libox {
+  width: 100%;
+  height: 17.73333333vw;
+  box-sizing: border-box;
+  padding: 2vw 1.33333333vw;
+}
+.home .content .environment ul li .libox h3 {
+  height: 3.73333333vw;
+  margin-bottom: 0.66666667vw;
+}
+.home .content .environment ul li .libox p {
+  font-size: 1.86666667vw;
+  color: #585858;
+  line-height: 2vw;
+}
+.home .content .environment ul .icon-mobile:before {
+  content: "\e600";
+}
