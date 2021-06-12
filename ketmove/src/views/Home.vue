@@ -139,7 +139,7 @@ export default {
                         return arr[index]
                     }
                 })
-                // console.log(this.model)
+                console.log(this.model)
             })
         },
         getteacher () {

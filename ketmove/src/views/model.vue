@@ -6,7 +6,7 @@
                     <img src="../assets/img/fh.png" >
                 </a>
                 <span>
-                    <input type="text" value="请输入您要搜索的内容">
+                    <input type="text" value="请输入您要搜索的内容" v-model="text">
                 </span>
                 <a href="JavaScript:;" class="yh">
                     <img src="../assets/img/yh.png">
@@ -36,7 +36,9 @@ import '../assets/js/index.js'
 export default {
     data () {
         return {
-            models: []
+            models: [],
+            modelslist: [],
+            text: ''
         }
     },
     methods: {
@@ -53,6 +55,7 @@ export default {
                         return arr[index]
                     }
                 })
+                this.modelslist = this.models
                 // console.log(this.model)
             })
         },
@@ -62,6 +65,15 @@ export default {
     },
     mounted () {
         this.getmodel()
+    },
+    watch: {
+        text () {
+            if (this.text === '') {
+                this.getmodel()
+            }
+            this.models = this.modelslist.filter(val => val.title.indexOf(this.text) > -1)
+            // console.log(this.models)
+        }
     }
 }
 </script>

@@ -82,8 +82,8 @@ html {
   position: fixed;
   top: 0.66666667vw;
   right: 0.66666667vw;
-  width: 40/7.5vw;
-  height: 40/7.5vw;
+  width: 40px;
+  height: 40px;
   background-color: #fff;
   border-radius: 50%;
   z-index: 999;
@@ -113,7 +113,7 @@ html {
   width: 60vw;
   height: 100%;
   box-sizing: border-box;
-  padding: 2.66666667vw 1.33333333vw;
+  padding: 20 10;
   border-left: 1px solid #000;
 }
 .index .morebox .morebox-nr li {
@@ -121,10 +121,10 @@ html {
   text-align: left;
   color: #fff;
   box-sizing: border-box;
-  font-size: 2.26666667vw;
-  padding: 0.66666667vw 0 0.66666667vw 3.33333333vw;
+  font-size: 17px;
+  padding: 5px 0 5px 25px;
   border-bottom: 1px solid #000;
-  line-height: 5.06666667vw;
+  line-height: 38px;
 }
 .index .morebox .morebox-nr li::after {
   content: "";
@@ -140,13 +140,14 @@ html {
   transform: rotate(45deg);
 }
 .index .toolbar {
+  text-align: center;
   position: fixed;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 5.6vw;
-  line-height: 5.6vw;
+  height: 42px;
+  line-height: 42px;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 999;
   color: #fff;
@@ -160,21 +161,25 @@ html {
 .index .toolbar ul li {
   width: 33%;
   height: 100%;
+  position: relative;
 }
 .index .toolbar ul li a {
-  position: absolute;
-  color: #fff;
-  font-size: 12px;
-  height: 5.6vw;
-  padding-top: 1.33333333vw;
-}
-.index .toolbar ul li a img {
-  top: 3px;
+  text-align: center;
   position: absolute;
   left: 50%;
-  margin-left: -20/2/7.5vw;
-  width: 20/7.5vw;
-  height: 21/7.5vw;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 12px;
+  height: 42px;
+  padding-top: 10px;
+}
+.index .toolbar ul li a img {
+  position: absolute;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 21px;
 }
 .index .wxconsultapp {
   display: none;
@@ -223,7 +228,7 @@ html {
   position: relative;
   width: 100%;
   height: auto;
-  padding-bottom: 5.6vw;
+  padding-bottom: 42px;
   /* 公共头部 */
   /* 广告 */
   /* 环境 */
@@ -246,20 +251,18 @@ html {
   width: 100%;
 }
 .home .content .environment-h h2 {
-  height: 6.4vw;
-  font-size: 2.93333333vw;
+  height: 48px;
+  font-size: 22px;
   color: #333;
   box-sizing: border-box;
-  padding-top: 2.66666667vw;
-  border-bottom: 1px solid #fff;
+  padding-top: 20px;
 }
 .home .content .environment-h p {
   position: relative;
-  height: 3.73333333vw;
+  height: 28px;
   font-size: 16px;
-  line-height: 5.06666667vw;
+  line-height: 38px;
   color: #989898;
-  border-bottom: 1px solid #fff;
   padding-bottom: 1.33333333vw;
 }
 .home .content .advertising {
@@ -281,7 +284,7 @@ html {
   width: 100%;
   height: 15.46666667vw;
   background-color: rgba(102, 0, 0, 0.6);
-  line-height: 5.33333333vw;
+  line-height: 4.66666667vw;
   color: #fff;
   font-size: 2.66666667vw;
   box-sizing: border-box;
@@ -330,12 +333,11 @@ html {
 }
 .home .content .environment ul li .libox {
   width: 100%;
-  height: 17.73333333vw;
   box-sizing: border-box;
   padding: 2vw 1.33333333vw;
 }
 .home .content .environment ul li .libox h3 {
-  height: 3.73333333vw;
+  height: 28px;
   margin-bottom: 0.66666667vw;
   font-size: 2.13333333vw;
   color: #333;
@@ -343,11 +345,12 @@ html {
 .home .content .environment ul li .libox p {
   font-size: 1.86666667vw;
   color: #585858;
-  line-height: 3.06666667vw;
+  line-height: 23px;
 }
 .home .content .environment ul li .lxwm {
   width: 100%;
-  height: 4vw;
+  height: 30px;
+  line-height: 30px;
   background-color: red;
   padding: 0 2%;
   margin-left: -2%;
@@ -420,20 +423,20 @@ html {
   margin-top: 2vw;
   background-color: #fff;
   text-align: left;
-  text-indent: 2.66666667vw;
+  text-indent: 20px;
   width: 100%;
   overflow: hidden;
 }
 .home .content .news ul li {
   border-bottom: 1px solid #ddd;
-  line-height: 2.66666667vw;
+  line-height: 20px;
   position: relative;
 }
 .home .content .news ul li::after {
   content: "";
   position: absolute;
-  left: 1.33333333vw;
-  bottom: 0.66666667vw;
+  left: 10px;
+  bottom: 5px;
   width: 5px;
   height: 5px;
   border-radius: 50%;
@@ -456,7 +459,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 5.6vw;
+  height: 42px;
   background-color: #fafafa;
 }
 .aboutus-top .return {
@@ -468,23 +471,21 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 20/7.5vw;
-  height: 22/7.5vw;
   z-index: 9;
 }
 .aboutus-top .return > a > img {
-  width: 20/7.5vw;
-  height: 22/7.5vw;
+  width: 25/7.5vw;
+  height: 27/7.5vw;
 }
 .aboutus-top .return .fh {
-  left: 4vw;
+  left: 30px;
 }
 .aboutus-top .return .fx {
-  right: 6.66666667vw;
+  right: 50px;
   transform: translateY(-50%) scale(0.9);
 }
 .aboutus-top .return .yh {
-  right: 13.33333333vw;
+  right: 100px;
 }
 /* 联系我们 */
 .aboutus {
@@ -492,7 +493,7 @@ html {
   width: 100vw;
   height: 100vh;
   background-color: #eee;
-  padding-top: 7.33333333vw;
+  padding-top: 55px;
   box-sizing: border-box;
 }
 .aboutus ul {
@@ -505,28 +506,28 @@ html {
   width: 100%;
   padding: 0 2px 4px;
   box-sizing: border-box;
-  height: 5.6vw;
+  height: 42px;
   background-color: #fafafa;
-  line-height: 5.6vw;
+  line-height: 42px;
   margin-bottom: 0.66666667vw;
   font-size: 1.86666667vw;
   color: #222;
 }
 /* 联系我们/关于我们/招聘要求 */
 .aboutusbox {
-  margin-top: -1.6vw;
+  margin-top: -12px;
   position: relative;
   width: 100%;
   height: auto;
   box-sizing: border-box;
-  padding: 2.66666667vw;
-  padding-bottom: 5.33333333vw;
+  padding: 20px;
+  padding-bottom: 40px;
   background-color: #fff;
 }
 .aboutusbox h3 {
-  font-size: 2.66666667vw;
+  font-size: 20px;
   color: #333;
-  line-height: 6.66666667vw;
+  line-height: 50px;
 }
 /* 模特 */
 .modelbox {
@@ -535,7 +536,7 @@ html {
   height: 100vh;
   background-color: #eee;
   box-sizing: border-box;
-  padding-top: 5.33333333vw;
+  padding-top: 40px;
   text-align: left;
 }
 .modelbox .aboutus-top {
@@ -544,7 +545,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 5.6vw;
+  height: 42px;
   background-color: #fafafa;
 }
 .modelbox .aboutus-top .return {
@@ -556,13 +557,11 @@ html {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 20/7.5vw;
-  height: 22/7.5vw;
   z-index: 9;
 }
 .modelbox .aboutus-top .return > a > img {
-  width: 20/7.5vw;
-  height: 22/7.5vw;
+  width: 25/7.5vw;
+  height: 27/7.5vw;
 }
 .modelbox .aboutus-top .return span {
   position: absolute;
@@ -570,7 +569,7 @@ html {
   transform: translateY(-50%);
   left: 9.33333333vw;
   width: 70%;
-  height: 4vw;
+  height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -597,36 +596,35 @@ html {
 }
 .modelbox h2 {
   width: 100%;
-  height: 4vw;
-  line-height: 4vw;
+  height: 30px;
+  line-height: 30px;
   background-color: #fff;
   text-indent: 13.33333333vw;
 }
 .modelbox ul {
   width: 100%;
   box-sizing: border-box;
-  padding: 0.66666667vw 0;
-  margin-top: 0vw;
+  padding: 5px 0;
 }
 .modelbox ul li {
   text-indent: 2.66666667vw;
   width: 100%;
-  height: 12.4vw;
-  margin-bottom: 0.26666667vw;
+  height: 93px;
+  margin-bottom: 2px;
   background-color: #fff;
   box-sizing: border-box;
-  padding: 1.33333333vw 0;
+  padding: 10px 0;
 }
 .modelbox ul li h4 {
-  font-size: 1.86666667vw;
+  font-size: 14px;
   color: #333;
-  height: 5.86666667vw;
+  height: 44px;
   display: block;
 }
 .modelbox ul li p {
   color: red;
-  font-size: 2vw;
-  height: 3.06666667vw;
+  font-size: 15px;
+  height: 23px;
   display: block;
 }
 /* 模特详细页面 */
@@ -636,14 +634,14 @@ html {
   height: 100vh;
   background-color: #eee;
   box-sizing: border-box;
-  padding-bottom: 5.6vw;
+  padding-bottom: 42px;
   text-align: left;
 }
 .modelshows .return {
   position: fixed;
   z-index: 9;
-  top: 2.66666667vw;
-  left: 1.33333333vw;
+  top: 20px;
+  left: 10px;
   height: 8vw;
   width: 8vw;
   text-align: center;
@@ -792,18 +790,18 @@ html {
   overflow: hidden;
   background-color: #eee;
   box-sizing: border-box;
-  padding-top: 5.6vw;
+  padding-top: 42px;
 }
 .newsbox .title {
   width: 100%;
-  height: 4vw;
+  height: 30px;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
 }
 .newsbox .title span {
   width: 50%;
-  line-height: 4vw;
+  line-height: 30px;
   height: 100%;
 }
 .newsbox .title span:hover {
@@ -814,9 +812,8 @@ html {
   text-align: left;
 }
 .newsbox ul li {
-  margin-top: 0.66666667vw;
+  margin-top: 5px;
   width: 100%;
-  height: 8.26666667vw;
   background-color: #fff;
   box-sizing: border-box;
   padding: 10px 0;
@@ -824,10 +821,10 @@ html {
 .newsbox ul li a {
   box-sizing: border-box;
   padding: 5px;
-  text-indent: 1.33333333vw;
+  text-indent: 10px;
 }
 .newsbox ul li a h3 {
-  height: 3.2vw;
+  height: 24px;
   font-size: 1.86666667vw;
   color: #222;
   font-weight: 400;
@@ -840,20 +837,21 @@ html {
 .newsdetail {
   position: relative;
   box-sizing: border-box;
-  padding: 5.86666667vw 0;
+  padding: 44px 0;
   height: 100vh;
   width: 100vw;
   background-color: #eee;
 }
 .newsdetail h2 {
-  font-size: 2.66666667vw;
-  line-height: 6.66666667vw;
+  font-size: 18px;
+  line-height: 50px;
 }
 .newsdetail .markdown-body {
   background-color: #fff;
   box-sizing: border-box;
-  padding: 1.33333333vw;
-  padding-bottom: 5.33333333vw;
+  padding: 10px;
+  overflow: hidden;
+  padding-bottom: 40px;
   text-align: center;
   line-height: 30px;
   font-size: 1.6vw;
@@ -866,7 +864,7 @@ html {
 }
 .newsdetail .recommend h3 {
   width: 100%;
-  height: 5.33333333vw;
+  height: 40px;
   font-size: 2.13333333vw;
   color: #222;
 }
@@ -874,8 +872,8 @@ html {
   display: inline-block;
   height: 1px;
   background-color: #999;
-  width: 45%;
-  transform: translateY(-0.66666667vw);
+  width: 40%;
+  transform: translateY(-5px);
 }
 .newsdetail .recommend ul {
   width: 100%;
@@ -883,7 +881,7 @@ html {
   height: 18.66666667vw;
   display: flex;
   justify-content: center;
-  padding-bottom: 5.33333333vw;
+  padding-bottom: 40px;
 }
 .newsdetail .recommend ul li {
   width: 131/7.5vw;
@@ -895,12 +893,12 @@ html {
 }
 .newsdetail .newlis {
   width: 100%;
-  height: 8.26666667vw;
+  height: 62px;
   box-sizing: border-box;
-  padding: 0.66666667vw;
+  padding: 5px;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 13.46666667vw;
+  padding-bottom: 90px;
 }
 .newsdetail .newlis span {
   width: 16.26666667vw;
