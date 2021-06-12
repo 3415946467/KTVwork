@@ -129,33 +129,72 @@ html {
   transform: translate(-50%, -50%);
 }
 
-/* 首页 */
-.home {
+/* 主页面 */
+.index {
   position: relative;
   width: 100%;
   height: 100%;
-  /* 头部 */
-  header {
-    position: relative;
-    width: 100%;
-    height: 117./@vw;
+  /* 固定导航栏 */
+  .fixednav {
+    position: fixed;
+    top: 5./@vw;
+    right: 5./@vw;
+    .setwh(40, 40);
     background-color: #fff;
-    /* logo */
-    .logo {
-      position: relative;
+    border-radius: 50%;
+    z-index: 999;
+    img {
       width: 100%;
       height: 100%;
     }
   }
-  /* 固定导航栏 */
-  .fixednav {
+  /* 导航更多 */
+  .morebox {
+    display: none;
     position: fixed;
-    top: 0;
     right: 0;
-    .setwh(32, 32);
-    background-color: #3cb5d5;
-    border-radius: 50%;
-    z-index: 999;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, .5);
+    a {
+      color: #fff;
+    }
+    .morebox-nr {
+      transition: all 1s;
+      position: absolute;
+      right: -450./@vw;
+      top: 0;
+      width: 450./@vw;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 20./@vw 10./@vw;
+      border-left: 1px solid #000;
+      li {
+        position: relative;
+        text-align: left;
+        color: #fff;
+        box-sizing: border-box;
+        font-size: 17./@vw;
+        padding: 5./@vw 0 5./@vw 25./@vw;
+        border-bottom: 1px solid #000;
+        line-height: 38./@vw;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 40%;
+          transform: translateY(-50%);
+          width: 8px;
+          height: 8px;
+          border: 1px solid #000;
+          border-left: 1px solid transparent;
+          border-bottom: 1px solid transparent;
+          transform: rotate(45deg);
+        }
+      }
+    }
   }
   /* 工具导航栏 */
   .toolbar {
@@ -192,13 +231,85 @@ html {
       }
     }
   }
+  /* 微信咨询 */
+  .wxconsultapp {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, .5);
+    .app {
+      width: 220./@vw;
+      height: 250./@vw;
+      .czjz();
+    }
+  }
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+}
+/* 首页 */
+.home {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* 头部 */
+  header {
+    position: relative;
+    width: 100%;
+    height: 117./@vw;
+    background-color: #fff;
+    /* logo */
+    .logo {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
   /* 内容 */
   .content {
     position: relative;
-    width: 96%;
-    margin: 0 2%;
-    box-sizing: border-box;
+    width: 100%;
     height: auto;
+    padding-bottom: 42./@vw;
+    /* 公共头部 */
+    .border-b::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 36px;
+      height: 1px;
+      background-color: rgb(60, 181, 213);
+    }
+    .environment-h {
+      height: 84px;
+      width: 100%;
+      h2 {
+        height: 48./@vw;
+        font-size: 22./@vw;
+        color: #333;
+        box-sizing: border-box;
+        padding-top: 20./@vw;
+        border-bottom: 1px solid #fff;
+      }
+      p {
+        position: relative;
+        height: 28./@vw;
+        font-size: 16px;
+        line-height: 38./@vw;
+        color: #989898;
+        border-bottom: 1px solid #fff;
+        padding-bottom: 10./@vw;
+      }
+    }
     /* 广告 */
     .advertising {
       position: relative;
@@ -235,24 +346,11 @@ html {
     /* 环境 */
     .environment {
       width: 100%;
+      padding: 0 2%;
+      box-sizing: border-box;
+      background-color: #ccc;
+      width: 100%;
       height: auto;
-      .environment-h {
-        height: 84px;
-        width: 100%;
-        h2 {
-          height: 48./@vw;
-          font-size: 22./@vw;
-          color: #333;
-          box-sizing: border-box;
-          padding-top: 10./@vw;
-        }
-        p {
-          height: 28./@vw;
-          font-size: 16px;
-          line-height: 28./@vw;
-          color: #989898;
-        }
-      }
       ul {
         width: 100%;
         height: auto;
@@ -260,6 +358,8 @@ html {
           width: 100%;
           height: auto;
           margin-top: 20./@vw;
+          background-color: #fff;
+          position: relative;
           &>a {
             position: relative;
             display: block;
@@ -278,18 +378,442 @@ html {
             h3 {
               height: 28./@vw;
               margin-bottom: 5./@vw;
+              font-size: 16./@vw;
+              color: #333;
             }
             p {
               font-size: 14./@vw;
               color: #585858;
-              line-height: 15./@vw;
+              line-height: 23./@vw;
+            }
+          }
+          .lxwm {
+            width: 100%;
+            height: 30./@vw;
+            background-color: red;
+            padding: 0 2%;
+            margin-left: -2%;
+            a {
+              color: #fff;
+              font-size: 14./@vw;
+              line-height: 30./@vw;
             }
           }
         }
-        .icon-mobile:before {
-          content: "\e600";
+      }
+    }
+    /* 活动 */
+    .activity {
+      width: 100%;
+      position: relative;
+      color: #fff;
+      margin-top: 5./@vw;
+      .bg {
+        background: rgba(0, 0, 0, .5);
+      }
+      h2 {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        font-size: 30./@vw;
+      }
+      p {
+        .czjz();
+        font-size: 20./@vw;
+        line-height: 40./@vw;
+        width: 70%;
+        top: 60%;
+      }
+    }
+    /* 模特 */
+    .model {
+      ul {
+        margin-top: 20./@vw;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        padding: 0 10./@vw;
+        li {
+          width: 49%;
+          a {
+            div {
+              width: 100%;
+              overflow: hidden;
+              img {
+                width: 300./@vw;
+                height: 300./@vw;
+              }
+            }
+            p {
+              line-height: 38./@vw;
+              font-size: 16./@vw;
+              color: #555;
+            }
+          }
+        }
+      }
+    }
+    /* 新闻 */
+    .news {
+      width: 100%;
+      background-color: #eee;
+      .environment-h {
+        background-color: #fff;
+        border-bottom: 1px solid #fff;
+      }
+      ul {
+        margin-top: 15./@vw;
+        background-color: #fff;
+        text-align: left;
+        text-indent: 20./@vw;
+        width: 100%;
+        // height: 525./@vw;
+        overflow: hidden;
+        li {
+          border-bottom: 1px solid #ddd;
+          line-height: 20./@vw;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 10./@vw;
+            bottom: 5./@vw;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: #666;
+            color: #7c7b7c;
+            font-size: 14./@vw;
+          }
         }
       }
     }
   }
+}
+/* 联系我们 */
+.aboutus {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+  padding-top: 55./@vw;
+  box-sizing: border-box;
+  .aboutus-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42./@vw;
+    background-color: #fafafa;
+    .return {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      &>a {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .setwh(20, 22);
+        z-index: 9;
+        &>img {
+          .setwh(20, 22);
+        }
+      }
+      .fh {
+        left: 30./@vw;
+      }
+      .fx {
+        right: 50./@vw;
+        transform: translateY(-50%) scale(.9);
+      }
+      .yh {
+        right: 100./@vw;
+      }
+    }
+  }
+  ul {
+    width: 100%;
+    height: 138/@vw;
+    text-align: left;
+    text-indent: 15./@vw;
+    li {
+      width: 100%;
+      padding: 0 2px 4px;
+      box-sizing: border-box;
+      height: 42./@vw;
+      background-color: #fafafa;
+      line-height: 42./@vw;
+      margin-bottom: 5./@vw;
+      font-size: 14./@vw;
+      color: #222;
+    }
+  }
+}
+/* 联系我们/关于我们/招聘要求 */
+.aboutusbox {
+  margin-top: -12./@vw;
+  position: relative;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 20./@vw;
+  padding-bottom: 40./@vw;
+  background-color: #fff;
+  h3 {
+    font-size: 20./@vw;
+    color: #333;
+    line-height: 50./@vw;
+  }
+}
+/* 模特 */
+.modelbox {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+  box-sizing: border-box;
+  padding-top: 40./@vw;
+  text-align: left;
+  .aboutus-top {
+    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 42./@vw;
+    background-color: #fafafa;
+    .return {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      &>a {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        .setwh(20, 22);
+        z-index: 9;
+        &>img {
+          .setwh(20, 22);
+        }
+      }
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 70./@vw;
+        width: 70%;
+        height: 30./@vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #F2F2F2;
+        border-radius: 30px;
+        input {
+          border: 0;
+          font-size: 11px;
+          color: #ccc;
+          height: 100%;
+        }
+      }
+      .fh {
+        left: 30./@vw;
+      }
+      .yh {
+        right: 85./@vw;
+      }
+      .fx {
+        right: 120/@vw;
+      }
+      .zy {
+        right: 55./@vw;
+      }
+    }
+  }
+  h2 {
+    width: 100%;
+    height: 30./@vw;
+    line-height: 30./@vw;
+    background-color: #fff;
+    text-indent: 100./@vw;
+  }
+  ul {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5./@vw 0;
+    margin-top: 0./@vw;
+    li {
+      text-indent: 20./@vw;
+      width: 100%;
+      height: 93./@vw;
+      margin-bottom: 2./@vw;
+      background-color: #fff;
+      box-sizing: border-box;
+      padding: 10./@vw 0;
+      h4 {
+        font-size: 14./@vw;
+        color: #333;
+        height: 44./@vw;
+        display: block;
+      }
+      p {
+        color: red;
+        font-size: 15./@vw;
+        height: 23./@vw;
+        display: block;
+      }
+    }
+  }
+}
+/* 模特详细页面 */
+.modelshows {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #eee;
+  box-sizing: border-box;
+  padding-bottom: 42./@vw;
+  text-align: left;
+  .return {
+    position: fixed;
+    z-index: 9;
+    top: 20./@vw;
+    left: 10./@vw;
+    height: 60./@vw;
+    width: 60./@vw;
+    text-align: center;
+    line-height: 60./@vw;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .5);
+    .fh {
+      .setwh(60,60);
+      span {
+        display: block;
+        .setwh(20, 20);
+        border: 2px solid #fff;
+        border-top: 1px solid transparent;
+        border-right: 1px solid transparent;
+        .czjz();
+        transform: translate(-20%, -50%) rotate(45deg);
+      }
+    }
+  }
+  .present {
+    width: 100vw;
+    background-color: #fff;
+    margin-bottom: 15./@vw;
+    .image {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 750./@vw;
+      img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    p {
+      text-indent: 20./@vw;
+      font-size: 30./@vw;
+      padding: 0 0 40./@vw;
+      span {
+        font-size: 50./@vw;
+      }
+    }
+    .price {
+      padding: 30px 0;
+    }
+  }
+  .explain {
+    width: 100%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 20./@vw;
+    padding-bottom: 25./@vw;
+    overflow: hidden;
+    h2 {
+      text-align: center;
+      height: 101./@vw;
+      padding: 20./@vw 0 0;
+      font-size: 28./@vw;
+      color: #262626;
+      span {
+        padding-bottom: 14./@vw;
+        border-bottom: 2px solid #0082ff;
+      }
+    }
+  }
+  .correlation {
+    margin-top: 20./@vw;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 34./@vw 25./@vw 30./@vw;
+    h3 {
+      height: 35./@vw;
+      margin-bottom: 20./@vw;
+      font-size: 26./@vw;
+      color: #2a2a2a;
+    }
+    ul {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        width: 33%;
+        margin-bottom: 50./@vw;
+        p {
+          font-size: 26./@vw;
+        }
+        div {
+          .setwh(220, 220);
+          overflow: hidden;
+          position: relative;
+          img {
+            width: 220./@vw;
+            .czjz();
+          }
+        }
+        .title {
+          height: 70./@vw;
+          font-size: 24./@vw;
+          color: #222;
+          line-height: 60./@vw;
+        }
+      }
+    }
+  }
+  .returntop {
+    display: none;
+    position: fixed;
+    right: 20./@vw;
+    bottom: 100./@vw;
+    .setwh(76,76);
+  }
+  .present-img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    img {
+      .czjz();
+    }
+  }
+}
+/* 新闻 */
+.newsbox {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #eee;
 }
