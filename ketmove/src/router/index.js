@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import index from '../views/index.vue'
+import Index from '../views/Index.vue'
 import Home from '../views/Home.vue'
 import model from '../views/model.vue'
 import news from '../views/news.vue'
@@ -9,18 +9,19 @@ import aboutusbox from '../components/aboutusbox.vue'
 import Contactus from '../components/Contactus.vue'
 import Requirement from '../components/Requirement.vue'
 import modeldetailed from '../components/modeldetailed.vue'
+import newsdetail from '../components/newsdetail.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    redirect: '/index'
+    redirect: '/Index'
   },
   {
-    path: '/index',
-    name: 'index',
-    component: index,
+    path: '/Index',
+    name: 'Index',
+    component: Index,
     children: [
       {
         path: '/',
@@ -65,6 +66,11 @@ const routes = [
         path: '/Requirement',
         name: 'Requirement',
         component: Requirement
+      },
+      {
+        path: '/newsdetail/:id',
+        name: 'newsdetail',
+        component: newsdetail
       }
     ]
   }

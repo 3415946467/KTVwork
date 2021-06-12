@@ -51,11 +51,26 @@ $(function () {
     }
     /* 页面滚动监听 */
     window.onscroll = function () {
-        if (document.documentElement.scrollTop >= 100) {
+        // console.log(document.documentElement.scrollTop)
+        /* 点击返回顶部 */
+        if (document.documentElement.scrollTop >= 0) {
             $('.ambient').addClass('anim')
             $('.returntop').show()
         } else {
             $('.returntop').hide()
+        }
+        /* 监听 */
+        if (document.documentElement.scrollTop >= 100) {
+            $('.environment').addClass('anim')
+        }
+        if (document.documentElement.scrollTop >= 1600) {
+            $('.activity').addClass('anim')
+        }
+        if (document.documentElement.scrollTop >= 2000) {
+            $('.model').addClass('anim')
+        }
+        if (document.documentElement.scrollTop >= 3100) {
+            $('.news').addClass('anim')
         }
     }
     /* 点击放大图片 */

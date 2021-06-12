@@ -129,6 +129,17 @@ html {
   transform: translate(-50%, -50%);
 }
 
+/* 动画 */
+.anim {
+  .environment-h {
+    animation: top .5s ease forwards;
+    opacity: 1;
+  }
+  ul {
+    animation: top 1s ease forwards;
+    opacity: 1;
+  }
+}
 /* 主页面 */
 .index {
   position: relative;
@@ -493,6 +504,49 @@ html {
     }
   }
 }
+@keyframes top {
+  0% {
+      opacity: 0;
+      transform: translateY(200px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(-0px);
+  }
+}
+.aboutus-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42./@vw;
+  background-color: #fafafa;
+  .return {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &>a {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      .setwh(20, 22);
+      z-index: 9;
+      &>img {
+        .setwh(20, 22);
+      }
+    }
+    .fh {
+      left: 30./@vw;
+    }
+    .fx {
+      right: 50./@vw;
+      transform: translateY(-50%) scale(.9);
+    }
+    .yh {
+      right: 100./@vw;
+    }
+  }
+}
 /* 联系我们 */
 .aboutus {
   position: relative;
@@ -501,39 +555,7 @@ html {
   background-color: #eee;
   padding-top: 55./@vw;
   box-sizing: border-box;
-  .aboutus-top {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 42./@vw;
-    background-color: #fafafa;
-    .return {
-      width: 100%;
-      height: 100%;
-      position: relative;
-      &>a {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        .setwh(20, 22);
-        z-index: 9;
-        &>img {
-          .setwh(20, 22);
-        }
-      }
-      .fh {
-        left: 30./@vw;
-      }
-      .fx {
-        right: 50./@vw;
-        transform: translateY(-50%) scale(.9);
-      }
-      .yh {
-        right: 100./@vw;
-      }
-    }
-  }
+  
   ul {
     width: 100%;
     height: 138/@vw;
@@ -816,4 +838,123 @@ html {
   height: 100vh;
   overflow: hidden;
   background-color: #eee;
+  box-sizing: border-box;
+  padding-top: 42./@vw;
+  .title {
+    width: 100%;
+    height: 30./@vw;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    span {
+      width: 50%;
+      line-height: 30./@vw;
+      height: 100%;
+      &:hover {
+        color: #0082ff;
+      }
+    }
+  }
+  ul {
+    width: 100%;
+    text-align: left;
+    li {
+      margin-top: 5./@vw;
+      width: 100%;
+      height: 62./@vw;
+      background-color: #fff;
+      box-sizing: border-box;
+      padding: 10px 0;
+      a {
+        box-sizing: border-box;
+        padding: 5px;
+        text-indent: 10./@vw;
+       
+        h3 {
+          height: 24./@vw;
+          font-size: 14./@vw;
+          color: #222;
+          font-weight: 400;
+        }
+        p {
+          font-size: 12./@vw;
+          color: #999;
+        }
+      }
+    }
+  }
+}
+/* 新闻详细 */
+.newsdetail {
+  position: relative;
+  box-sizing: border-box;
+  padding: 44./@vw 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #eee;
+  h2 {
+    font-size: 20./@vw;
+    line-height: 50./@vw;
+  }
+  .markdown-body {
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 10./@vw;
+    padding-bottom: 40./@vw;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12./@vw;
+  }
+  .recommend {
+    width: 100%;
+    height: 210./@vw;
+    text-align: center;
+    background-color: #fff;
+    h3 {
+      width: 100%;
+      height: 40./@vw;
+      font-size: 16./@vw;
+      color: #222;
+      span {
+        display: inline-block;
+        height: 1px;
+        background-color: #999;
+        width: 45%;
+        transform: translateY(-5./@vw);
+      }
+    }
+    ul {
+      width: 100%;
+      text-align: center;
+      height: 140./@vw;
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40./@vw;
+      li {
+        .setwh(131,136);
+        img {
+          .setwh(111,111);
+        }
+      }
+    }
+  }
+  .newlis {
+    width: 100%;
+    height: 62./@vw;
+    box-sizing: border-box;
+    padding: 5./@vw;
+    display: flex;
+    justify-content: space-between;
+    span {
+      width: 122./@vw;
+      height: 42./@vw;
+      text-align: center;
+      line-height: 42./@vw;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      color: #000;
+      font-size: 16./@vw;
+    }
+    padding-bottom: 101./@vw;
+  }
 }

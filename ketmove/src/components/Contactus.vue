@@ -36,7 +36,7 @@ export default {
     mounted () {
         this.$http.get('/api/about_us/list').then(res => {
             // console.log(res)
-            this.value = res[1].content
+            this.value = res[1].content.replace('/', this.imgURL + '/')
             this.title = res[1].title
         })
     }
@@ -45,4 +45,7 @@ export default {
 
 <style lang="less" scoped>
 @import '../assets/less/index.less';
+.markdown-body {
+    overflow: hidden;
+}
 </style>
