@@ -17,16 +17,58 @@
                 <a href="JavaScript:;" class="zy" @click.prevent="getindex">
                     <img src="../assets/img/zy.png">
                 </a>
+                <a href="##" @click.prevent="addnum()" class="bian" v-if="num === 1">
+                    <img src="../assets/img/style4.png" alt="">
+                </a>
+                <a href="##" @click.prevent="addnum()" class="bian" v-if="num === 2">
+                    <img src="../assets/img/style3.png" alt="">
+                </a>
+                <a href="##" @click.prevent="addnum()" class="bian" v-if="num === 3">
+                    <img src="../assets/img/style1.png" alt="">
+                </a>
+                <a href="##" @click.prevent="addnum()" class="bian" v-if="num === 4">
+                    <img src="../assets/img/style2.png" alt="">
+                </a>
             </div>
         </div>
         <h2>高端模特</h2>
-        <ul>
-            <li v-for="val in models" :key="val.id" >
-                <a href="#" @click.prevent="getmodeldetailed(val.id)">
+        <ul class="model">
+            <li v-for="val in models" :key="val.id" :class="[num === 1? 'lis1' : '', num === 2? 'lis2' : '', num === 3? 'lis3' : '', num === 4? 'lis4' : '']" @click.prevent="getmodeldetailed(val.id)">
+                <div :class="[num === 1 ? 'dn' : 'block']">
+                    <a href="##"><img :src="srcurl(val.image)" alt=""></a>
+                </div>
+                <a href="#" >
                     <h4>{{val.title}}</h4>
                     <p>￥{{val.price}}元</p>
                 </a>
             </li>
+            <!-- <li class="lis2" v-for="val in models" :key="val.id" @click.prevent="getmodeldetailed(val.id)" :class="[num === 2 ? 'block' : 'dn']">
+                <div>
+                    <a href="##"><img :src="srcurl(val.image)" alt=""></a>
+                </div>
+                <a href="#">
+                    <h4>{{val.title}}</h4>
+                    <p>￥{{val.price}}元</p>
+                </a>
+            </li>
+            <li class="lis3" v-for="val in models" :key="val.id" @click.prevent="getmodeldetailed(val.id)" :class="[num === 3 ? 'block' : 'dn']">
+                <div>
+                    <a href="##"><img :src="srcurl(val.image)" alt=""></a>
+                </div>
+                <a href="#">
+                    <h4>{{val.title}}</h4>
+                    <p>￥{{val.price}}元</p>
+                </a>
+            </li>
+            <li class="lis4" v-for="val in models" :key="val.id" @click.prevent="getmodeldetailed(val.id)" :class="[num === 4 ? 'block' : 'dn']">
+                <div>
+                    <a href="##"><img :src="srcurl(val.image)" alt=""></a>
+                </div>
+                <a href="#">
+                    <h4>{{val.title}}</h4>
+                    <p>￥{{val.price}}元</p>
+                </a>
+            </li> -->
         </ul>
     </div>
 </template>
@@ -38,7 +80,8 @@ export default {
         return {
             models: [],
             modelslist: [],
-            text: ''
+            text: '',
+            num: 1
         }
     },
     methods: {
@@ -61,6 +104,16 @@ export default {
         },
         getmodeldetailed (id) {
             this.$router.push('/modeldetailed/' + id)
+        },
+        srcurl (src) {
+            return this.http + src
+        },
+        addnum () {
+            if (this.num !== 4) {
+                this.num++
+            } else {
+                this.num = 1
+            }
         }
     },
     mounted () {

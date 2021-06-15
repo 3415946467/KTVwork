@@ -604,7 +604,7 @@ html {
 .modelbox {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  // height: 100vh;
   background-color: #eee;
   box-sizing: border-box;
   padding-top: 40px;
@@ -644,6 +644,7 @@ html {
         background-color: #F2F2F2;
         border-radius: 30px;
         input {
+          width: 95%;
           border: 0;
           font-size: 11px;
           color: #ccc;
@@ -662,6 +663,9 @@ html {
       .zy {
         right: 55./@vw;
       }
+      .bian {
+        right: 25./@vw;
+      }
     }
   }
   h2 {
@@ -675,7 +679,7 @@ html {
     width: 100%;
     box-sizing: border-box;
     padding: 5px 0;
-    li {
+    .lis1 {
       text-indent: 20./@vw;
       width: 100%;
       height: 93px;
@@ -695,6 +699,88 @@ html {
         height: 23px;
         display: block;
       }
+    }
+  }
+  .lis2 {
+    background: #fff;
+    border-radius: 5px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    border: 1px solid #EEEEEE;
+    overflow: hidden;
+    width: 49%;
+    float: left;
+    h4 {
+      font-size: 14px;
+      color: #333;
+      display: block;
+    }
+    p {
+      color: red;
+      font-size: 15px;
+      display: block;
+    }
+  }
+  .lis3 {
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    list-style: none;
+    margin-left: 10px;
+    background-color: #fff;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    div {
+      width: 120px;
+      height: 120px;
+      overflow: hidden;
+      float: left;
+      margin-right: 12px;
+      position: relative;
+      border-radius: 6px;
+      flex: none;
+      display: flex;
+      align-items: center;
+    }
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+      flex: auto;
+      flex-flow: column;
+      h4 {
+        font-size: 14px;
+        color: #333;
+        display: block;
+      }
+      p {
+        color: red;
+        font-size: 15px;
+      }
+    }
+  }
+  .lis4 {
+    border-bottom: 2px solid #EEEEEE;
+    overflow: hidden;
+    margin: 0 0 4px 0;
+    list-style: none;
+    background-color: #fff;
+    div {
+      overflow: hidden;
+      margin-right: 0px;
+      position: relative;
+      margin: auto;
+      border-radius: 6px;
+    }
+    h4 {
+      font-size: 14px;
+      color: #333;
+      display: block;
+    }
+    p {
+      color: red;
+      font-size: 15px;
+      display: block;
     }
   }
 }
@@ -967,4 +1053,10 @@ html {
     }
     padding-bottom: 90px;
   }
+}
+.block {
+  display: block;
+}
+.dn {
+  display: none;
 }

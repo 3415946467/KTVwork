@@ -147,6 +147,9 @@ export default {
                 this.news = res
                 // console.log(res)
             })
+        },
+        getnews (id) {
+            this.$router.push('/newsdetail/' + id)
         }
     },
     mounted () {

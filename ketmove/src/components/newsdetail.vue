@@ -44,7 +44,7 @@ export default {
     },
     methods: {
         setnews () {
-            this.$router.push('/news')
+            this.$router.push('/home')
         },
         getdata (id) {
             this.$http.get('/api/journalism/get?id=' + this.id).then(res => {
